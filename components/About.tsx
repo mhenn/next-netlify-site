@@ -15,7 +15,7 @@ export default function About({ name }) {
                         <span className="text-white text-4xl mx-auto mb-16"> The Team</span>
                         <div className="flex flex-row justify-between h-full">
                             <div className="perspective w-80 h-80">
-                                <div className={rotate ? "rotate" : "rotate2"}>
+                                <div className={!rotate ? "rotate" : "rotate2"}>
                                     <img
                                         onClick={() => setRotate(!rotate)}
                                         src="https://randomuser.me/api/portraits/women/27.jpg"
@@ -28,7 +28,7 @@ export default function About({ name }) {
                                 </div>
                             </div>
                             <div className="perspective w-80 h-80">
-                                <div className={rotate2 ? "rotate" : "rotate2"}>
+                                <div className={!rotate2 ? "rotate" : "rotate2"}>
                                     <img
                                         onClick={() => setRotate2(!rotate2)}
                                         src="https://randomuser.me/api/portraits/women/27.jpg"

@@ -94,6 +94,15 @@ background: linear-gradient(42deg, rgba(143,24,131,1) 0%, rgba(129,32,157,1) 4%,
     transform-style: preserve-3d;
 }
 
+.rotate:hover{
+   transform: rotateY(20deg);
+    cursor:pointer;
+}
+
+.rotate2:hover{
+    cursor:pointer;
+}
+
 
 .rotate2{
    transform: rotateY(180deg);
