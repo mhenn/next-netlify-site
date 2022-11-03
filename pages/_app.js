@@ -1,9 +1,9 @@
-import '@styles/globals.css'
+import '../styles/globals.css'
 import Head from 'next/head'
-import Header from '@components/Header'
-import Home from '@components/Home'
-import About from '@components/About'
-import Contact from '@components/Contact'
+import Header from '../components/Header'
+import Home from '../components/Home'
+import About from '../components/About'
+import Contact from '../components/Contact'
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
