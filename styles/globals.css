@@ -23,26 +23,24 @@ body {
     height:10vh;
 }
 
-main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.gradient{
+background: rgb(143,24,131);
+background: linear-gradient(42deg, rgba(143,24,131,1) 0%, rgba(129,32,157,1) 4%, rgba(110,36,166,1) 8%, rgba(91,39,175,1) 18%, rgba(60,35,175,1) 40%, rgba(76,52,215,1) 75%, rgba(94,103,249,1) 89%, rgba(97,113,255,1) 100%);
 }
 
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
+.box{
+  --mask:
+    radial-gradient(402.49px at 50% calc(100% - 540.00px),#000 99%,#0000 101%) calc(50% - 360px) 0/720px 100%,
+    radial-gradient(402.49px at 50% calc(100% + 360.00px),#0000 99%,#000 101%) 50% calc(100% - 180px)/720px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
 }
 
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ .nice-text::after{
+  background: #d8630f;
+  content: "";
+  height: 5px;
+  left: 0;
+  width: 280px;
+  bottom: -16px;
 }
