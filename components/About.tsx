@@ -27,16 +27,14 @@ export default function About({ name }) {
                                     >Simon Roder</div>
                                 </div>
                             </div>
-                            <div className="perspective w-80 h-80">
-                                <div className={!rotate2 ? "rotate" : "rotate2"}>
-                                    <img
-                                        onClick={() => setRotate2(!rotate2)}
-                                        src="https://randomuser.me/api/portraits/women/27.jpg"
-                                        className="face z-10 mx-auto my-auto w-80 h-80 front"
-                                    />
+                            <div className="overflow-hidden w-80 h-80 slide-parent">
+                                <img
+                                    src="https://randomuser.me/api/portraits/women/27.jpg"
+                                    className=" z-10 mx-auto my-auto w-80 h-80"
+                                />
+                                <div className="slide " >
                                     <div
-                                        onClick={() => setRotate2(!rotate2)}
-                                        className="face back bg-white z-10 mx-auto my-auto w-80 h-80 back"
+                                        className=" bg-white bg-opacity-70 z-10 w-80 h-80 "
                                     >Hakan Koese</div>
                                 </div>
                             </div>
