@@ -1,9 +1,13 @@
 import ScrollTo from 'react-scroll-into-view'
-
+import useStore from '../utils/State'
 
 export default function Header() {
+
+    const { visible } = useStore()
+    const height = visible ? 'h-16 bg-amber-600' : 'h-24'
+
     return (
-        <div className="z-20 flex flex-row justify-between bg-amber-600 bg-opacity-70 text-white font-bold h-20 w-full fixed">
+        <div className={"transition-all duration-500  z-20 flex flex-row justify-between bg-opacity-70 text-white font-bold  w-full fixed " + height}>
             <div className="mx-auto my-auto overflow-hidden h-full" >
                 <svg
                     width="100%"
@@ -14,7 +18,7 @@ export default function Header() {
                     <text
                         x="0"
                         y="65"
-                        font-size="48"
+                        fontSize="48"
                         fill="white"
                     >Startup</text>
                 </svg>
