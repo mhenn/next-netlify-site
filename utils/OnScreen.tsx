@@ -1,12 +1,12 @@
 import { defaults } from 'cypress/types/lodash'
 import { useEffect, useRef } from 'react'
 
-const onScreen = (options, setter) => {
+const onScreen = (options, setter, value) => {
     const containerRef = useRef(null)
     const callback = (entries) => {
         const [entry] = entries
         if (entry.isIntersecting) {
-            setter(true)
+            setter(value)
         }
     }
 
