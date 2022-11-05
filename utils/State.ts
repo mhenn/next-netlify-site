@@ -1,14 +1,14 @@
 import create from 'zustand'
+import produce from 'immer'
 
 interface SiteState {
-    visible: boolean
-    setVisible: (to: boolean) => void
+    visible: object
+    setVisible: (key: string, to: boolean) => void
 }
 
 const useStore = create<SiteState>()((set) => ({
-    visible: false,
-    setVisible: (to) => set(() => ({ visible: to }))
-
+    visible: {},
+    setVisible: (key, to) => set(produce(state => {state.visible[key] = to}))
 }))
 
 export default useStore
