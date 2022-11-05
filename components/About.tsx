@@ -6,11 +6,14 @@ export default function About({ name }) {
 
     const { setVisible } = useStore()
 
+
+
     const containerRef = onScreen({
         root: null,
         rootMargin: "0px",
-        threshold: 0.15
-    }, setVisible, true)
+        threshold: 0.1
+    }, () => { setVisible('nav', true) })
+
 
     return (
         <>

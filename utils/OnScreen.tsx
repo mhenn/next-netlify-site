@@ -1,18 +1,16 @@
-import { defaults } from 'cypress/types/lodash'
 import { useEffect, useRef } from 'react'
 
-const onScreen = (options, setter, value) => {
+
+const onScreen = (options: any, callback: () => void) => {
+
     const containerRef = useRef(null)
-    const callback = (entries) => {
+    const internalCallback = (entries: any) => {
         const [entry] = entries
-        if (entry.isIntersecting) {
-            setter(value)
-        }
+        if (entry.isIntersecting) callback()
     }
 
     useEffect(() => {
-
-        const observer = new IntersectionObserver(callback, options)
+        const observer = new IntersectionObserver(internalCallback, options)
         if (containerRef.current) observer.observe(containerRef.current)
 
         return () => {
